@@ -24,22 +24,66 @@
         <dubbo.version>2.6.0</dubbo.version>
         <zkclient.version>0.10</zkclient.version>
         <mybatis.version>1.3.1</mybatis.version>
-        <!--<nekohtml.version>1.9.20</nekohtml.version>-->
-        <!--<xml-apis.version>1.4.01</xml-apis.version>-->
-        <!--<batik-ext.version>1.9.1</batik-ext.version>-->
-        <!--<jsoup.version>1.11.2</jsoup.version>-->
         <httpclient.version>4.5.5</httpclient.version>
         <commons-lang3.version>3.7</commons-lang3.version>
         <mapper-starter.version>1.2.3</mapper-starter.version>
-        <!--<jedis.version>2.9.0</jedis.version>-->
-        <!--<jest.version>5.3.3</jest.version>-->
-        <!--<jna.version>4.5.1</jna.version>-->
+        <jedis.version>2.9.0</jedis.version>
+        <nekohtml.version>1.9.20</nekohtml.version>
+        <xml-apis.version>1.4.01</xml-apis.version>
+        <batik-ext.version>1.9.1</batik-ext.version>
+        <redisson.version>3.10.5</redisson.version>
+        <jest.version>5.3.3</jest.version>
+        <jna.version>4.5.1</jna.version>
         <beanUtils.version>1.9.3</beanUtils.version>
-        <!--<version.curator>2.12.0</version.curator>-->
+        <fastdfs-client.version>1.27-SNAPSHOT</fastdfs-client.version>
+        <jwt.version>0.9.0</jwt.version>
+        <activemq-pool.version>5.15.2</activemq-pool.version>
+        <alipay-sdk.version>3.0.0</alipay-sdk.version>
+        <commons-codec.version>1.11</commons-codec.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.alipay</groupId>
+                <artifactId>alipay-sdk</artifactId>
+                <version>${alipay-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sourceforge.nekohtml</groupId>
+                <artifactId>nekohtml</artifactId>
+                <version>${nekohtml.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml-apis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-ext</artifactId>
+                <version>${batik-ext.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.csource</groupId>
+                <artifactId>fastdfs-client-java</artifactId>
+                <version>${fastdfs-client.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
@@ -63,7 +107,13 @@
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
             </dependency>
-            
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -91,11 +141,27 @@
                 <artifactId>commons-beanutils</artifactId>
                 <version>${beanUtils.version}</version>
             </dependency>
-            <!--<dependency>-->
-            <!--<groupId>org.apache.curator</groupId>-->
-            <!--<artifactId>curator-framework</artifactId>-->
-            <!--<version>${version.curator}</version>-->
-            <!--</dependency>-->
+            <dependency>
+                <groupId>io.searchbox</groupId>
+                <artifactId>jest</artifactId>
+                <version>${jest.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
+            <dependency>
+                <groupId>net.java.dev.jna</groupId>
+                <artifactId>jna</artifactId>
+                <version>${jna.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-pool</artifactId>
+                <version>${activemq-pool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
